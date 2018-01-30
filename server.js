@@ -20,6 +20,6 @@ app.get('/*', (req, res)=> res.sendFile(defaultPath.src + '/index.html') )
 
 app.listen(port, (error)=>{
     if(!error){
-        console.log('********开始跑了*********');
+        //开始跑了
     }
 });

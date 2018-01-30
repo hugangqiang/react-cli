@@ -1,19 +1,9 @@
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-
-axios.defaults.timeout = 6000;
-axios.defaults.baseURL = 'https://musicApi.hugangqiang.com';
-
+import Routes from 'routes/Routes'
 
 ReactDOM.render(
-    <Router>
-        <div>
-            {/* <Route exact path="/" component={Home} />
-            <Route exact path="/web" component={Web} />
-            <Route exact path="/message" component={Message} />
-            <Route exact path="/search" component={Search} /> */}
-            hello
-        </div>
-    </Router>,
+    <div>
+        <Routes />
+    </div>,
     document.getElementById('root')
 );
 

@@ -16,6 +16,11 @@ let config = Object.assign(defaultConfig, {
             ReactDOM: 'react-dom',
             PT: 'prop-types',
             axios: 'axios',
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
         })
     ],
 
@@ -54,6 +59,20 @@ config.module.rules.push(
     {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+    },
+    {
+        test: /\.less$/,
+        use: [
+            {
+                loader: "style-loader" 
+            },
+            {
+                loader: 'css-loader'
+            },
+            {
+                loader: 'less-loader'
+            }
+        ]
     }
 );
 
