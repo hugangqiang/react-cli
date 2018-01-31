@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch,hashHistory } from 'react-router-dom';
 
 import Home from "view/home/Home";
 import Register from "view/register/Register";
@@ -13,9 +13,16 @@ class Routes extends Component {
         super(props);
         this.state = {  }
     }
+    
     render() { 
+        const routes = [
+            {
+              path: '/dashboard',
+              component: () => import('./routes/dashboard/'),
+            }
+        ]
         return (  
-            <Router>
+            <Router history={hashHistory}>
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/login" component={Login} />
@@ -26,7 +33,7 @@ class Routes extends Component {
         )
     }
 }
- 
+
 
 
 export default Routes;

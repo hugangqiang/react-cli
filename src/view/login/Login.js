@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LoginBox from 'layout/sign/LoginBox';
+import Sign from 'layout/sign/Sign';
 
 class Login extends Component {
     constructor(props) {
@@ -9,7 +9,9 @@ class Login extends Component {
     render() { 
         return (
             <div>
-                <LoginBox />
+                <Sign>
+                    <span>登录</span>
+                </Sign>
             </div>
         )
     }

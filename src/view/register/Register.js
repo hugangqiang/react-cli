@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RegisterBox from 'layout/sign/RegisterBox';
+import Sign from 'layout/sign/Sign';
 
 class Register extends Component {
     constructor(props) {
@@ -9,7 +9,7 @@ class Register extends Component {
     render() { 
         return (
             <div>
-                <RegisterBox />
+                <Sign />
             </div>
         )
     }
