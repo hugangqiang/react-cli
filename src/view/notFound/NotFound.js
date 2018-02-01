@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Frame from 'layout/frame/Frame';
 
 class NotFound extends Component {
     constructor(props) {
@@ -8,7 +9,7 @@ class NotFound extends Component {
     render() { 
         return (
             <div>
-                404
+                <Frame>404</Frame>
             </div>
         )
     }

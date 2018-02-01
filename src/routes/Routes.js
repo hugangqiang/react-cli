@@ -17,17 +17,35 @@ class Routes extends Component {
     render() { 
         const routes = [
             {
-              path: '/dashboard',
-              component: () => import('./routes/dashboard/'),
+                path: '/',
+                title: '首页',
+                component: Home
+            },
+            {
+                path: '/login',
+                title: '登录',
+                component: Login
+            },
+            {
+                path: '/register',
+                title: '注册',
+                component: Register
             }
         ]
+
         return (  
             <Router history={hashHistory}>
                 <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/register" component={Register} />
-                    <Route component={NotFound}/>
+                    {
+                        routes.map(({ path,component,title }, key) => (
+                            <Route key={key}
+                                exact
+                                path={path}
+                                component={component}
+                            />
+                        ))
+                    }
+                    <Route component={NotFound} />
                 </Switch>
             </Router>
         )
