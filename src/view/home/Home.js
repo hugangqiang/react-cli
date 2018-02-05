@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-const mapStateToProps = state => ({
+const routesData = state => ({
     routesData: ["aa","asdfas"]
 })
 const mapDispatchToProps = (dispatch, ownProps) => {
@@ -14,9 +14,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 };
 
-@connect(({mapStateToProps,mapDispatchToProps}) => ({
-    state: mapStateToProps,
-    dispatch: mapDispatchToProps
+@connect(({routesData}) => ({
+    routesData
 }))
 export default class Home extends Component {
     constructor(props) {
