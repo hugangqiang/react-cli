@@ -24,7 +24,6 @@ class Routes extends Component {
                                 component={component}
                             />
                         ))
-                        
                     }
                 </Switch>
             </Router>
