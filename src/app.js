@@ -12,6 +12,7 @@ const reducer = (state={routesData: []}, action={}) => {
 }
 const store = createStore(reducer)
 
+
 ReactDOM.render(
     <Provider store={store}>
         <Routes />
